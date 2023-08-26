@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+}
+
+#block-form {
+    background: aquamarine;
+    width: 30%;
+    height: 100%;
+}
+
+#block-parking {
+    background: cadetblue;
+    width: 70%;
+    height: 100%;
+}
+
+#block-form h2 {
+    text-align: center;
+    margin: 2%;
+    border-bottom: 2px solid darkred;
+    padding-bottom: 1%;
+}
+
+.form-control {
+    margin: 2% 0;
+    text-align: center;
+}
+
+.form-control input, .form-control select, .form-control button {
+    width: 70%;
+    height: 30px;
+}
+
+.form-control button {
+    height: 50px;
+    border: dashed yellowgreen;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.form-control button:hover {
+    transition: 1s;
+    background-color: rgb(134, 91, 214);
+}
+
+.buttons-lvls {
+    height: 30px;
+    margin: 2% 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#block-parking {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+}
+
+#block-parking img {
+    width: 790px;
+    height: 560px;
+    border: 2px solid #505050;
+    border-radius: 5px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.buttons-lvls button {
+    border-radius: 5px;
+    border: none;
+    background: #2f5151;
+    color: whitesmoke;
+    font-size: medium;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.buttons-lvls button:hover {
+    transition: .5s;
+    background: #223636;
+}
+
+.buttons-lvls button.active {
+    background: #092b70;
+}
+
+#block-parking #cars-1,
+#block-parking #cars-2,
+#block-parking #cars-3 {
+    width: 790px;
+    height: 560px;
+    position: absolute;
+    background: rgba(1, 1, 1, 0.2);
+    top: 5%;
+    left: 5%;
+}
+
+#block-parking #cars-2,
+#block-parking #cars-3 {
+    display: none;
+}
+
+.car {
+    position: absolute;
+    width: 60px;
+    height: 110px;
+    /* background: goldenrod; */
+    /* top: 10px;
+    left: 80px; */
+    /* top: 1%;
+    left: 10%; */
+}
+
+.car .head {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    /* background: darkolivegreen; */
+    border-bottom: 1px solid black;
+}
+
+.car .head::before, .car .head::after {
+    content: "";
+    width: 30%;
+    height: 10%;
+    background: rgb(81, 178, 207);
+    position: absolute;
+    top: 0;
+}
+
+.car .head::before {
+    left: 0;
+    border-radius: 0px 0px 7px 0px;
+}
+
+.car .head::after {
+    right: 0;
+    border-radius: 0px 0px 0px 7px;
+}
+
+.car .middle {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    /* background: gold; */
+    border-bottom: 1px solid black;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.car .footer {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    /* background: darkred; */
+}
+
+.car .footer::before, .car .footer::after {
+    content: "";
+    width: 30%;
+    height: 30%;
+    background: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+}
+
+.car .footer::before {
+    left: 0;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.car .footer::after {
+    right: 0;
+    border-radius: 10px 0px 0px 0px;
+}
+
+/* Седан */
+.car.type-sedan .middle {
+    height: 65px !important;
+}
+
+.car.type-sedan .footer {
+    height: 25px !important;
+}
+
+/* Универсал */
+.car.type-wagon .middle {
+    height: 87px !important;
+    border-bottom: 2px solid rgb(56, 56, 56) !important;
+}
+
+.car.type-wagon .footer {
+    height: 3px !important;
+}
+
+/* Хэтчбек */
+.car.type-hatchback {
+    height: 90px !important;
+}
+
+.car.type-hatchback .middle {
+    height: 60px !important;
+}
+
+.car.type-hatchback .footer {
+    height: 10px !important;
+}
+
+.car.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.car.rotate-45 {
+    transform: rotate(45deg);
+}

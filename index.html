@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парковка</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <!-- <h2>Парковка</h2> -->
+
+    <div id="block-form">
+        <h2>Добавление машины</h2>
+        <div class="buttons-lvls">
+            <button id="btn-lvl_1" class="active">Уровень 1</button>
+            <button id="btn-lvl_2">Уровень 2</button>
+            <button id="btn-lvl_3">Уровень 3</button>
+        </div>
+        <div class="form-control">
+            <input type="text" name="number" placeholder="XX0000XX">
+        </div>
+
+        <div class="form-control">
+            <input type="color" name="color">
+        </div>
+
+        <div class="form-control">
+            <select name="type">
+                <option value="limo">Лимо</option>
+                <option value="sedan">Седан</option>
+                <option value="wagon">Универсал</option>
+                <option value="hatchback">Хэтчбек</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <select name="place">
+
+            </select>
+        </div>
+
+        <div class="form-control">
+            <button id="btn-add">Добавить</button>
+        </div>
+    </div>
+
+    <div id="block-parking">
+        <img src="assets/images/lvl_1.jpg" alt="">
+        <div id="cars-1">
+
+        </div>
+        <div id="cars-2">
+
+        </div>
+        <div id="cars-3">
+
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
